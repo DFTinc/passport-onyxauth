@@ -25,7 +25,7 @@ accepts these credentials and calls `done` providing a user, as well as
     passport.use(new GoogleStrategy({
         clientID: ONYXAUTH_CLIENT_ID,
         clientSecret: ONYXAUTH_CLIENT_SECRET,
-        callbackURL: "http://127.0.0.1:3000/auth/onyxauth/callback"
+        callbackURL: "http://127.0.0.1:3000/oauth2/onyxauth/callback"
       },
       function(accessToken, refreshToken, profile, done) {
         User.findOrCreate({ onyxAuthId: profile.id }, function (err, user) {
@@ -54,8 +54,7 @@ application:
 
 ## Examples
 
-For a complete, working example, refer to the [OAuth 1.0 example](https://github.com/jaredhanson/passport-google-oauth/tree/master/examples/oauth)
-and the [OAuth 2.0 example](https://github.com/jaredhanson/passport-google-oauth/tree/master/examples/oauth2).
+For a complete, working example, refer to the [example](https://github.com/DFTinc/passport-onyxauth/example).
 
 ## Credits
 

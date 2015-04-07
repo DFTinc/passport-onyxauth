@@ -1,7 +1,7 @@
 {
-  "name": "passport-google-oauth",
-  "version": "0.0.1",
-  "description": "ONYX Auth (OAuth) authentication strategies for Passport.",
+  "name": "passport-onyxauth",
+  "version": "0.1.1",
+  "description": "ONYX Auth (OAuth2) authentication strategies for Passport.",
   "keywords": [
     "passport",
     "onyx",
@@ -12,6 +12,13 @@
     "authentication",
     "identity"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DFTinc/passport-onyxauth.git"
+  },
+  "bugs": {
+    "url": "http://github.com/DFTinc/passport-onyxauth/issues"
+  },
   "author": {
     "name": "Diamond Fortress Technologies, Inc.",
     "email": "dftmain@diamondfortress.com",
@@ -28,18 +35,22 @@
     "pkginfo": "0.2.x",
     "passport-oauth": "~0.1.4"
   },
-  "devDependencies": {
-    "vows": "0.6.x"
-  },
   "engines": {
     "node": ">= 0.4.0"
   },
-  "_id": "passport-onyxauth@0.0.1",
+  "_id": "passport-onyxauth@0.1.1",
   "_npmVersion": "1.1.62",
+  "_npmUser": {
+    "name": "mwheatley",
+    "email": "mwheatley@diamondfortress.com"
+  },
   "maintainers": [
     {
       "name": "Diamond Foretress Technologies, Inc.",
       "email": "dftmain@diamondfortress.com"
     }
-  ]
+  ],
+  "directories": {},
+  "readme": "Passport strategies for authenticating with ONYX Auth using OAuth 2.0.\n\n  This module lets you authenticate using ONYX Auth in your Node.js applications. By plugging into Passport, ONYX Auth authentication can be easily and unobtrusively integrated into any application or framework that supports Connect-style middleware, including Express.",
+  "homepage": "https://github.com/DFTinc/passport-onyxauth"
 }
