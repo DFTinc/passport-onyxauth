@@ -1,34 +1,34 @@
-# Passport-OnyxAuth
+# Passport-PassPrint
 
-[Passport](http://passportjs.org/) strategies for authenticating with [ONYX Auth](http://www.onyxauth.com/)
+[Passport](http://passportjs.org/) strategies for authenticating with [PassPrint](https://www.passprint.me/)
 using OAuth 2.0.
 
-This module lets you authenticate using ONYX Auth in your Node.js applications.
-By plugging into Passport, ONYX Auth authentication can be easily and
+This module lets you authenticate using PassPrint in your Node.js applications.
+By plugging into Passport, PassPrint authentication can be easily and
 unobtrusively integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
 [Express](http://expressjs.com/).
 
 ## Install
 
-    $ npm install passport-onyxauth
+    $ npm install passport-passprint
 
 ## Usage of OAuth 2.0
 
 #### Configure Strategy
 
-The ONYX Auth OAuth 2.0 authentication strategy authenticates users using an ONYX Auth
+The PassPrint OAuth 2.0 authentication strategy authenticates users using an PassPrint
 account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a client ID, client secret, and callback URL.
 
     passport.use(new GoogleStrategy({
-        clientID: ONYXAUTH_CLIENT_ID,
-        clientSecret: ONYXAUTH_CLIENT_SECRET,
-        callbackURL: "http://127.0.0.1:3000/oauth2/onyxauth/callback"
+        clientID: PASSPRINT_CLIENT_ID,
+        clientSecret: PASSPRINT_CLIENT_SECRET,
+        callbackURL: "http://127.0.0.1:3000/oauth2/passprint/callback"
       },
       function(accessToken, refreshToken, profile, done) {
-        User.findOrCreate({ onyxAuthId: profile.id }, function (err, user) {
+        User.findOrCreate({ passprintId: profile.id }, function (err, user) {
           return done(err, user);
         });
       }
@@ -36,17 +36,17 @@ accepts these credentials and calls `done` providing a user, as well as
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the `'onyxauth'` strategy, to
+Use `passport.authenticate()`, specifying the `'passprint'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.get('/oauth2/onyxauth',
-      passport.authenticate('onyxauth'));
+    app.get('/oauth2/passprint',
+      passport.authenticate('passprint'));
 
-    app.get('/oauth2/onyxauth/callback',
-      passport.authenticate('onyxauth', { failureRedirect: '/login' }),
+    app.get('/oauth2/passprint/callback',
+      passport.authenticate('passprint', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/');
@@ -54,11 +54,11 @@ application:
 
 ## Examples
 
-For a complete, working example, refer to the [example](https://github.com/DFTinc/passport-onyxauth/example).
+For a complete, working example, refer to the [example](https://github.com/DFTinc/passport-passprint/example).
 
 ## Credits
 
-  - [Diamond Fortress Technologies, Inc.](https://github.com/DFTinc/passport-onyxauth)
+  - [Diamond Fortress Technologies, Inc.](https://github.com/DFTinc/passport-passprint)
 
 ## License
 
