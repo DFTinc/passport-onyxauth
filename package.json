@@ -1,6 +1,6 @@
 {
   "name": "passport-passprint",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "PassPrint (OAuth2) authentication strategies for Passport.",
   "keywords": [
     "passport",
