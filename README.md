@@ -22,7 +22,7 @@ account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a client ID, client secret, and callback URL.
 
-    passport.use(new GoogleStrategy({
+    passport.use(new PassPrintStrategy({
         clientID: PASSPRINT_CLIENT_ID,
         clientSecret: PASSPRINT_CLIENT_SECRET,
         callbackURL: "http://127.0.0.1:3000/oauth2/passprint/callback"
